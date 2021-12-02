@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['djang_secret_key']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','rccgbackend.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','rccgbackend.herokuapp.com',]
 
 
 # Application definition
