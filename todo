@@ -1,0 +1,80 @@
+
+Nav:
+    about us-> should have a drop down 
+        Miniters
+        Church Administration->Link to Church Admin page
+    Resource-> should now contain minitries Back to Shilo 
+
+
+
+Gallery Page  -- done except fecthing     
+1)put giving in the home page--f - floating icon -- done
+2)get the three recent youtube video on the front page and create a didcated page --done
+to display all the videos
+2.1)archive page where all the youtube videos are stored- done
+
+3)live stream to have two dropdown ->live stream(takes to youube page) and list of programme(-take ti the archive page) -- doen
+4)about us render all endpoint
+5) render it data
+6)event page should reder all their event -- theres is page
+
+
+mininster picture and thier profile page
+
+event in the home page should have a veiw more btn
+events page should list events which are pictures
+ in about us vision Box Missing
+ Our Belief page
+
+able to change the sliders -b
+create minister profile -- edit pastor profile
+
+Our Groups
+Pulication Page
+
+
+end Points 
+    Get All Sliders --done Tested
+
+    get all events images -- done--tested
+    Get all minister profile --done Testd
+    get all gallery images -- done -- tested
+    get our church -- done --tested
+    get our missions --done -- tested
+    our Belief -- done --tested
+    <!-- get Join Ou -->
+
+
+
+
+once done with endpoint
+test
+build some pages in react like publication
+feed on the api
+Our Groups
+Pulication Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
