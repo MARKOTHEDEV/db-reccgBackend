@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from .models import (BeliefContent, Gallery, MinisterProfile,OurBelief,
     MissionContent,OurMission,
-    OurChurch,ChurchContent, PaymentMethods, Sliders,Events
+    OurChurch,ChurchContent, PaymentMethods, Sliders,Events,
+    PastorAndWifeDetailAtFrontPage,Ourgroups
     )
 # Register your models here.
 
@@ -12,6 +13,7 @@ admin.site.site_title = "Admin Dashboard"
 admin.site.index_title = "Welcome to Your Admin Dashboard"
 
 admin.site.unregister(Group)
+admin.site.register(Ourgroups)
 
 
 class OurBeliefContent(admin.TabularInline):
@@ -70,3 +72,5 @@ admin.site.register(PaymentMethods)
 
 
 admin.site.register(Events)
+# PastorAndWifeDetailAtFrontPage,Ourgroups
+admin.site.register(PastorAndWifeDetailAtFrontPage)

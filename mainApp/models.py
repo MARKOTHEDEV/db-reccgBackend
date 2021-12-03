@@ -102,5 +102,19 @@ class PaymentMethods(models.Model):
         verbose_name_plural = "Payment Methods"
         
 
+class PastorAndWifeDetailAtFrontPage(models.Model):
+    pastor_image =models.ImageField(upload_to='PastorAndWifeDetailAtFrontPage/pastor_image/',blank=True)
+    pastor_wife_image =models.ImageField(upload_to='PastorAndWifeDetailAtFrontPage/pastor_wife_image/',blank=True)
+    content=models.TextField()
+    header = models.CharField(max_length=200,default='Mr and Miss Anthony Aro')
 
-# class 
+    def __str__(self):return self.header
+
+
+class Ourgroups(models.Model):
+    "meaning list of department"
+    heading=models.CharField(max_length=300,default='Enter the Depart Name')
+    phone_number = models.CharField(max_length=13)
+    content = models.TextField()
+
+    def __str__(self):return self.heading

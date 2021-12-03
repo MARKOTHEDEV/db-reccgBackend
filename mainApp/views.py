@@ -113,3 +113,41 @@ def get_our_belief(self):
     }
 
     return Response({'message':True,"data":data},status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+def all_church_groups(request):
+    data =[]
+    
+
+    for church_group in models.Ourgroups.objects.all():
+        data.append({"id":church_group.id,"heading":church_group.heading,"phone_number":church_group.phone_number,
+            "content":church_group.content
+        })
+    
+
+    return  Response({"message":True,"data":data},status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def getFrontPagePastorData(request):
+    pastor_front_data = models.PastorAndWifeDetailAtFrontPage.objects.all().first()
+    data = dict()
+    pastor_image=''
+    pastor_wife_image=''
+
+    if pastor_front_data is not None:
+        try:pastor_wife_image=pastor_front_data.pastor_wife_image.url
+        except:pastor_wife_image=''
+
+        try:pastor_image=pastor_front_data.pastor_image.url
+        except:pastor_image=''
+        data={
+            "pastor_wife_image":pastor_wife_image,
+            "pastor_image":pastor_image,
+            "id":pastor_front_data.id,
+            "content":pastor_front_data.content,
+            "header":pastor_front_data.header
+        }
+
+    
+    return  Response({"message":True,"data":data},status=status.HTTP_200_OK)
