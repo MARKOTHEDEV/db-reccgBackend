@@ -19,8 +19,8 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
+    path('api/',include('mainApp.urls')),
     path('', admin.site.urls),
-    path('api/',include('mainApp.urls'))
 ]
 
 
