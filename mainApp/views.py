@@ -73,7 +73,7 @@ def get_all_events(request):
         except:Imageurl=''
 
         all_event.append(
-            {"id":event.id,'image':Imageurl}
+            {"id":event.id,'image':Imageurl,"name":event.name}
         )
 
     return  Response({"message":True,"data":all_event},status=status.HTTP_200_OK)
