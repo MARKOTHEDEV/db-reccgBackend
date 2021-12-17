@@ -13,9 +13,19 @@ class OurBelief(models.Model):
 class BeliefContent(models.Model):
     ourbelief = models.ForeignKey(OurBelief,on_delete=models.CASCADE)
     paragraph = models.TextField()
+    heading = models.CharField(max_length=400,default="..title")
     
 
 
+class Sermon(models.Model):
+    title = models.CharField(max_length=400)
+
+    def __str__(self):return f'{self.title}'
+
+
+class  SermonContent(models.Model):
+    sermon = models.ForeignKey(Sermon,on_delete=models.CASCADE)
+    paragraph = models.TextField()
 
 class OurMission(models.Model):
     "for our Belief"
@@ -118,3 +128,14 @@ class Ourgroups(models.Model):
     content = models.TextField()
 
     def __str__(self):return self.heading
+
+
+
+
+class Resource(models.Model):
+    heading=models.CharField(max_length=200)
+    content = models.TextField()
+
+
+    def __str__(self):
+        return f'{self.heading}'

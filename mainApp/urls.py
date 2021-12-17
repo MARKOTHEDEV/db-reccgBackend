@@ -12,5 +12,7 @@ urlpatterns  =[
     path('all-gallery/', views.get_all_gallery),
     path('all_church_groups/',views.all_church_groups),
     path('getFrontPagePastorData/',views.getFrontPagePastorData),
+    path('our_belief_detail/<int:id>/',views.get_our_beliefDetail),
+    path('resource/',views.resourcePage)
 
 ]

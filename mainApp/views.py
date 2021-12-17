@@ -4,6 +4,24 @@ from . import models
 from rest_framework.response import  Response
 from rest_framework import status
 
+
+
+
+
+
+
+@api_view(['GET'])
+def resourcePage(request):
+
+    data = models.Resource.objects.all().values()
+
+
+
+    return Response({"message":True,"data":data},status=status.HTTP_200_OK)
+
+
+
+
 @api_view(['GET'])
 def get_all_misters(request):
     all_minsters = []
@@ -110,6 +128,20 @@ def get_our_belief(self):
         "id":our_belief.id,
         "heading":our_belief.heading,
         "content":our_belief.beliefcontent_set.all().values()
+    }
+
+    return Response({'message':True,"data":data},status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def get_our_beliefDetail(request,id=None):
+    "get our belief detail"
+    data = dict()
+    if not models.OurBelief.objects.filter(id=id).exists():return Response({'message':False},status=status.HTTP_404_NOT_FOUND)
+    our_belief = models.OurBelief.objects.get(id=id)
+    data ={
+        "id":our_belief.id,
+        'all_content':our_belief.beliefcontent_set.all().values()
     }
 
     return Response({'message':True,"data":data},status=status.HTTP_200_OK)

@@ -8,7 +8,7 @@ Nav:
 
 
 Gallery Page  -- done except fecthing     
-1)put giving in the home page--f - floating icon -- done
+1)put giving in the home page--f - floating icon -- done(make it more bolder)
 2)get the three recent youtube video on the front page and create a didcated page --done
 to display all the videos
 2.1)archive page where all the youtube videos are stored- done
@@ -42,17 +42,25 @@ end Points
     get our church -- done --tested
     get our missions --done -- tested
     our Belief -- done --tested
+    Our Groups||department -- done tested
+
+
+
+    About Pastor At FrontPage -- done model remains end point
     <!-- get Join Ou -->
 
 
 
 
 once done with endpoint
-test
+test -- done -- doen
 build some pages in react like publication
 feed on the api
-Our Groups
-Pulication Page
+Our Groups --done with model 
+Pulication Page 
+
+
+stopped at front end the mr and miss anthony aro ->detial i have not gotten the content yet-- doneS
 
 
 
@@ -60,16 +68,28 @@ Pulication Page
 
 
 
+aLL events should just beading heading -- done
+have a resource page that have list of card that have heading and content --just get from back end for now
 
 
 
+About us should have a drop down --  done
+    About us
+    Church Administration (meaing church admin) -- done
+    Ministers -- make it fecth items  
+
+
+Lisen to 50:22
 
 
 
+ 
+in about us there should be mission and vison.. but belief should have exvept that will link to his own page
+(ou beilf is measing a sub heading Backend)
+read more.. 
 
 
-
-
+and a page for sermons
 
 
 

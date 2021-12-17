@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from .models import (BeliefContent, Gallery, MinisterProfile,OurBelief,
     MissionContent,OurMission,
-    OurChurch,ChurchContent, PaymentMethods, Sliders,Events,
+    OurChurch,ChurchContent, PaymentMethods, Resource, Sliders,Events,
+    Sermon,SermonContent,
     PastorAndWifeDetailAtFrontPage,Ourgroups
     )
 # Register your models here.
@@ -58,6 +59,17 @@ class OurChurchAdmin(admin.ModelAdmin):
 
 
 
+class SermonContent(admin.TabularInline):
+    model =  SermonContent
+    extra=1
+
+class SermonAdmin(admin.ModelAdmin):
+    fieldsets=[(None,{'fields':['title',]})]
+    inlines=[SermonContent]
+
+
+
+admin.site.register(Sermon,SermonAdmin)
 
 admin.site.register(OurChurch,OurChurchAdmin)
 
@@ -74,3 +86,7 @@ admin.site.register(PaymentMethods)
 admin.site.register(Events)
 # PastorAndWifeDetailAtFrontPage,Ourgroups
 admin.site.register(PastorAndWifeDetailAtFrontPage)
+
+
+
+admin.site.register(Resource)
