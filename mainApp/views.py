@@ -190,7 +190,7 @@ def getFrontPagePastorData(request):
 def get_sermons(request):
 
     data = models.Sermon.objects.all().values("id","title")
-    return Response(data,status=status.HTTP_200_OK)
+    return Response({'message':True,"data":data},status=status.HTTP_200_OK)
     
 @api_view(['GET'])
 def get_sermonDetail(request,pk=None):
@@ -200,4 +200,4 @@ def get_sermonDetail(request,pk=None):
         'title':sermon.title,
         "all_content":sermon.sermoncontent_set.all().values('id','paragraph')
     }
-    return Response(data,status=status.HTTP_200_OK)
+    return Response({'message':True,"data":data},status=status.HTTP_200_OK)
