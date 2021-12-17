@@ -13,6 +13,9 @@ urlpatterns  =[
     path('all_church_groups/',views.all_church_groups),
     path('getFrontPagePastorData/',views.getFrontPagePastorData),
     path('our_belief_detail/<int:id>/',views.get_our_beliefDetail),
-    path('resource/',views.resourcePage)
+    path('resource/',views.resourcePage),
+
+    path('sermons/',views.get_sermons,),
+    path('sermon_detail/<int:pk>/',views.get_sermonDetail),
 
 ]
