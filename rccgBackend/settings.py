@@ -146,7 +146,10 @@ CORS_ALLOWED_ORIGINS = [
 "https://rccgbackend.herokuapp.com",
 "https://rccgfront.herokuapp.com",
 'https://rccghohp2021.org',
-"http://rccghohp2021.org"
+"http://rccghohp2021.org",
+
+'https://www.rccghohp2021.org',
+"http://www.rccghohp2021.org",
 ]
 
 CORS_ALLOW_METHODS = [
