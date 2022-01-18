@@ -171,18 +171,26 @@ CORS_ALLOW_HEADERS = [
 
 
 
-"Start of Aws S3 bucket settings "
-AWS_ACCESS_KEY_ID = os.environ['aws_access_key_id']
-AWS_SECRET_ACCESS_KEY = os.environ['aws_secret_access_key']
-AWS_STORAGE_BUCKET_NAME = 'rccgmrdaboclient'
-AWS_S3_SIGNATURE_VERSION = 's3v4'
-AWS_S3_REGION_NAME = 'us-east-2'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-AWS_S3_VERIFY = True
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' 
+# "Start of Aws S3 bucket settings "
+# AWS_ACCESS_KEY_ID = os.environ['aws_access_key_id']
+# AWS_SECRET_ACCESS_KEY = os.environ['aws_secret_access_key']
+# AWS_STORAGE_BUCKET_NAME = 'rccgmrdaboclient'
+# AWS_S3_SIGNATURE_VERSION = 's3v4'
+# AWS_S3_REGION_NAME = 'us-east-2'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# AWS_S3_VERIFY = True
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' 
 
+"usiing cloudinary for storage"
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ['cloud_name'],
+    'API_KEY': os.environ['api_key'],
+    'API_SECRET': os.environ['api_secret'],
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+"end of usign CLOUDINARY for image storage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
