@@ -144,8 +144,9 @@ CORS_ALLOWED_ORIGINS = [
 
 "http://localhost:3000",
 "https://rccgbackend.herokuapp.com",
-'https://pedantic-wilson-a12857.netlify.app',
-'https://rccghohp2021.org'
+"https://rccgfront.herokuapp.com",
+'https://rccghohp2021.org',
+"http://rccghohp2021.org"
 ]
 
 CORS_ALLOW_METHODS = [
